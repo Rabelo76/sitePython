@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <center>
+        <h1>Bem vindo ao meu site</h1>
+        <h3>Esse site é um teste</h3>
+        <p>Bem vindo</p>
+        <p id="visitante" class="nomeVisitante">Aguardando...</p>
+
+        <br>
+        <a href="https://github.com/dashboard"><img src="images.jfif" alt=""></a>
+
+        <h3>Cadastro</h3>
+        <label>Nome</label>
+        <br>
+        <input type="text">
+        <br>
+
+        <label>Sobrenome</label>
+        <br>
+        <input type="text">
+        <br><br>
+        
+        <button onclick="enviar()" class="botao">Enviar</button>
+        
+        <script src="script.js"></script>
+    </center>
+
+    <style>
+        body {
+            background-color: lightgray;
+        }
+        
+        h1 {
+            color: red;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        h3 {
+            color: blue;
+            font-size: 40px;
+        }
+        
+        .nomeVisitante {
+            color: red;
+            font-size: 50px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        .botao {
+            height: 50px;
+            width: 200px;
+            background-color: greenyellow;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+        .botao:hover {
+            background-color: orange;
+            color: black;
+        }
+    </style>
+
+    <script>
+
+        function enviar() {
+            alert("Dados enviados com sucesso!")
+        }
+        
+        //Variável para pegar o nome do visitante
+        var usuario = prompt("Digite o seu nome")
+        
+        //Pegar o valor da variável e imprimir na tela
+        document.getElementById('visitante').innerHTML = usuario
+
+    </script>
+
+</body>
+</html>
